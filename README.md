@@ -2,7 +2,7 @@
 
 一個互動式的網頁應用程式，用於展示和教學 UI/UX 設計原則。讓學生能夠對比正確與錯誤的設計，並直接體驗各種設計原則的效果。
 
-🔗 **線上展示**: [https://nsysu-opendev.github.io/principle-of-ui-ux/](https://nsysu-opendev.github.io/principle-of-ui-ux/)
+🔗 **線上展示**: [https://whats2000.github.io/principle-of-ui-ux/](https://whats2000.github.io/principle-of-ui-ux/)
 
 ## 功能特色
 

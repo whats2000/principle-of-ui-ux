@@ -10,6 +10,7 @@ import {
   AimOutlined,
   CompassOutlined,
   PlayCircleOutlined,
+  ThunderboltOutlined,
   ExperimentOutlined,
 } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
@@ -22,6 +23,7 @@ import StayOnPagePrinciple from './components/principles/StayOnPagePrinciple';
 import UsabilityPrinciple from './components/principles/UsabilityPrinciple';
 import GuidancePrinciple from './components/principles/GuidancePrinciple';
 import TransitionPrinciple from './components/principles/TransitionPrinciple';
+import ImmediateReactionPrinciple from './components/principles/ImmediateReactionPrinciple';
 
 const { Header, Sider, Content } = Layout;
 const { Title } = Typography;
@@ -75,6 +77,11 @@ const menuItems: MenuItem[] = [
     label: '過渡動畫原則',
   },
   {
+    key: 'immediate-reaction',
+    icon: <ThunderboltOutlined />,
+    label: '立即反應原則',
+  },
+  {
     key: 'coming-soon',
     icon: <ExperimentOutlined />,
     label: '更多原則（即將推出）',
@@ -109,6 +116,8 @@ function App() {
         return <GuidancePrinciple />;
       case 'transition':
         return <TransitionPrinciple />;
+      case 'immediate-reaction':
+        return <ImmediateReactionPrinciple />;
       default:
         return <ProximityPrinciple />;
     }

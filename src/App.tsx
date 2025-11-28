@@ -4,12 +4,14 @@ import {
   GroupOutlined,
   AlignLeftOutlined,
   HighlightOutlined,
+  CopyOutlined,
   ExperimentOutlined,
 } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import ProximityPrinciple from './components/principles/ProximityPrinciple';
 import AlignmentPrinciple from './components/principles/AlignmentPrinciple';
 import ContrastPrinciple from './components/principles/ContrastPrinciple';
+import RepetitionPrinciple from './components/principles/RepetitionPrinciple';
 
 const { Header, Sider, Content } = Layout;
 const { Title } = Typography;
@@ -31,6 +33,11 @@ const menuItems: MenuItem[] = [
     key: 'contrast',
     icon: <HighlightOutlined />,
     label: '對比原則',
+  },
+  {
+    key: 'repetition',
+    icon: <CopyOutlined />,
+    label: '重複原則',
   },
   {
     key: 'coming-soon',
@@ -55,6 +62,8 @@ function App() {
         return <AlignmentPrinciple />;
       case 'contrast':
         return <ContrastPrinciple />;
+      case 'repetition':
+        return <RepetitionPrinciple />;
       default:
         return <ProximityPrinciple />;
     }

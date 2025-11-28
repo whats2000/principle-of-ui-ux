@@ -8,6 +8,7 @@ import {
   DragOutlined,
   LayoutOutlined,
   AimOutlined,
+  CompassOutlined,
   ExperimentOutlined,
 } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
@@ -18,6 +19,7 @@ import RepetitionPrinciple from './components/principles/RepetitionPrinciple';
 import DirectManipulationPrinciple from './components/principles/DirectManipulationPrinciple';
 import StayOnPagePrinciple from './components/principles/StayOnPagePrinciple';
 import UsabilityPrinciple from './components/principles/UsabilityPrinciple';
+import GuidancePrinciple from './components/principles/GuidancePrinciple';
 
 const { Header, Sider, Content } = Layout;
 const { Title } = Typography;
@@ -61,6 +63,11 @@ const menuItems: MenuItem[] = [
     label: '易用性原則',
   },
   {
+    key: 'guidance',
+    icon: <CompassOutlined />,
+    label: '引導原則',
+  },
+  {
     key: 'coming-soon',
     icon: <ExperimentOutlined />,
     label: '更多原則（即將推出）',
@@ -91,6 +98,8 @@ function App() {
         return <StayOnPagePrinciple />;
       case 'usability':
         return <UsabilityPrinciple />;
+      case 'guidance':
+        return <GuidancePrinciple />;
       default:
         return <ProximityPrinciple />;
     }

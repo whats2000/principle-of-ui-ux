@@ -163,7 +163,7 @@ const GroupedForm = () => (
     </Card>
 
     <Card size='small' title='偏好設定' style={{ backgroundColor: '#fafafa' }}>
-      <Space direction='vertical'>
+      <Space vertical>
         <Checkbox>記住我</Checkbox>
         <Checkbox>訂閱電子報</Checkbox>
         <Checkbox>同意條款</Checkbox>

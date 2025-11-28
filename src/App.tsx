@@ -1,8 +1,13 @@
 import { useState } from 'react';
 import { Layout, Menu, Typography, theme, ConfigProvider } from 'antd';
-import { GroupOutlined, ExperimentOutlined } from '@ant-design/icons';
+import {
+  GroupOutlined,
+  AlignLeftOutlined,
+  ExperimentOutlined,
+} from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import ProximityPrinciple from './components/principles/ProximityPrinciple';
+import AlignmentPrinciple from './components/principles/AlignmentPrinciple';
 
 const { Header, Sider, Content } = Layout;
 const { Title } = Typography;
@@ -14,6 +19,11 @@ const menuItems: MenuItem[] = [
     key: 'proximity',
     icon: <GroupOutlined />,
     label: '關聯性原則',
+  },
+  {
+    key: 'alignment',
+    icon: <AlignLeftOutlined />,
+    label: '對齊原則',
   },
   {
     key: 'coming-soon',
@@ -34,6 +44,8 @@ function App() {
     switch (selectedKey) {
       case 'proximity':
         return <ProximityPrinciple />;
+      case 'alignment':
+        return <AlignmentPrinciple />;
       default:
         return <ProximityPrinciple />;
     }

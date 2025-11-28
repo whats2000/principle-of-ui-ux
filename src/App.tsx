@@ -12,6 +12,7 @@ import {
   PlayCircleOutlined,
   ThunderboltOutlined,
   ExperimentOutlined,
+  GithubOutlined,
 } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import ProximityPrinciple from './components/principles/ProximityPrinciple';
@@ -183,12 +184,26 @@ function App() {
               background: colorBgContainer,
               display: 'flex',
               alignItems: 'center',
+              justifyContent: 'space-between',
               borderBottom: '1px solid #f0f0f0',
             }}
           >
             <Title level={3} style={{ margin: 0 }}>
               設計原則互動展示
             </Title>
+            <a
+              href='https://github.com/whats2000/principle-of-ui-ux'
+              target='_blank'
+              rel='noopener noreferrer'
+              style={{
+                fontSize: 24,
+                color: '#000',
+                display: 'flex',
+                alignItems: 'center',
+              }}
+            >
+              <GithubOutlined />
+            </a>
           </Header>
           <Content
             style={{
